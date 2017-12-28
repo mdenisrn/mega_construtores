@@ -4,12 +4,11 @@
     <router-view />
   </div>
 </template>
-
 <script>
-/*
- * Root component
- */
-export default {}
+  /*
+   * Root component
+   */
+  export default {
+  }
 </script>
-
 <style></style>
