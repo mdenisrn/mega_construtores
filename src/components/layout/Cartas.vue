@@ -1,36 +1,27 @@
 <template>
   <div align="center">
-    <q-card inline>
+    <q-card v-for="n in 50" :key="n" inline>
       <q-card-media>
-        <img src="~statics/CT1.png">
+        <img :src="'statics/CT'+ n +'.png'">
       </q-card-media>
     </q-card>
-    <q-card inline>
-      <q-card-media>
-        <img src="~statics/CT2.png">
-      </q-card-media>
-    </q-card>
-    <q-card inline>
-      <q-card-media>
-        <img src="~statics/CT3.png">
-      </q-card-media>
-    </q-card>
-    <q-card inline>
-      <q-card-media>
-        <img src="~statics/CT4.png">
-      </q-card-media>
-    </q-card>
-    <q-card inline>
-      <q-card-media>
-        <img src="~statics/CT5.png">
-      </q-card-media>
-    </q-card>
+    <q-fixed-position corner="bottom-right" :offset="[18, 18]">
+      <q-btn color="primary"
+             round
+             v-back-to-top.animate="{offset: 500, duration: 200}"
+             class="animate-pop">
+        <q-icon name="keyboard_arrow_up" />
+      </q-btn>
+    </q-fixed-position>
   </div>
-
 </template>
 
 <script>
   import {
+    BackToTop,
+    QCollapsible,
+    QFixedPosition,
+    QBtn,
     QCard,
     QCardMedia,
     QCardActions,
@@ -58,6 +49,9 @@
       }
     },
     components: {
+      QCollapsible,
+      QFixedPosition,
+      QBtn,
       QCard,
       QCardMedia,
       QCardActions,
@@ -69,6 +63,9 @@
       QItemSide,
       QItemTile,
       QIcon
+    },
+    directives: {
+      BackToTop
     }
   }
 </script>

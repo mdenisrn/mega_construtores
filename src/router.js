@@ -30,7 +30,8 @@ export default new VueRouter({
       component: load('Hello'),
       children: [
         { path: 'login', component: load('layout/Login') },
-        { path: 'cartas', component: load('layout/Cartas') }
+        { path: 'cartas', component: load('layout/Cartas') },
+        { path: 'mercado', component: load('layout/Mercado') }
       ]
     },
     // Always leave this last one
