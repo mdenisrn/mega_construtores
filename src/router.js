@@ -27,9 +27,10 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      component: load('Hello'),
+      component: load('Principal'),
       children: [
         { path: 'login', component: load('layout/Login') },
+        { path: 'inicial', component: load('layout/Inicial') },
         { path: 'cartas', component: load('layout/Cartas') },
         { path: 'mercado', component: load('layout/Mercado') }
       ]
